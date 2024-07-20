@@ -8,10 +8,17 @@ main {
 
 /* navbar styles */
 nav {
-  padding: 40px 0;
+  padding: 20px 0;
   position: fixed;
   z-index: 10;
   width: 100%;
+  transition: all .3s;
+}
+
+nav.scroll {
+  background-color: #1a1a1a;
+  backdrop-filter: blur(4px);
+  border-radius: 0 0 20px 20px;
 }
 
 .nav-container {
@@ -47,7 +54,8 @@ header {
   color: white;
   font-size: 30px;
   padding: 160px 0;
-  min-height: 500px;
+  min-height: 1084px;
+  position: relative;
 }
 
 header h1 {
@@ -72,10 +80,10 @@ header p {
   border-radius: 50px;
   border: solid 1px white;
   background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(1px);
   padding: 8px;
   max-width: 344px;
-  margin: 45px auto;
+  margin: 45px auto 25px;
 }
 
 .search-box input {
@@ -84,7 +92,6 @@ header p {
   outline: none;
   color: white;
   flex: 1;
-  padding: 15px 20px;
   font-size: 18px;
 }
 
@@ -104,3 +111,72 @@ header p {
   padding: 11px;
   cursor: pointer;
 }
+
+.unions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25.5px;
+  position: absolute;
+  left: 249px;
+  width: 112px;
+}
+
+.union-radios{
+  width: 100%;
+  height: 56px;
+  background-image: url("../assets/icons/Union.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.union-dot{
+  width: 24px;
+  height: 24px;
+  border: solid 2px white;
+  border-radius: 50%;
+  transform: translateY(-3px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.union-dot:nth-child(1){
+  background-color: #e58411;
+}
+
+.union-dot:nth-child(2){
+  background-color: #00D6C9;
+}
+
+.union-dot:nth-child(3){
+  background-color: #7C7C7C;
+}
+
+.union-circle{
+  border: solid 1px white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.inner-union-circle{
+  background-color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+}
+
+
+
+
